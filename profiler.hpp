@@ -168,15 +168,15 @@ double RES_NO_DUPLICATION;
     std::cout << changeColor(STR_NO_DUPLICATION);                 \
     std::string LINE_NO_DUPLICATION;                              \
     std::ifstream in_help_NO_DUPLICATION;                         \
-    in_help_NO_DUPLICATION.open("help.txt");                      \
+    in_help_NO_DUPLICATION.open("include/help.txt");              \
     if (in_help_NO_DUPLICATION.is_open()) {                       \
-        while (getline(in, LINE_NO_DUPLICATION)) {                \
-            std::cout << LINE_NO_DUPLICATION << '\n';             \
+        while (getline(in_help_NO_DUPLICATION, LINE_NO_DUPLICATION)) {                \
+            std::cout << changeColor(LINE_NO_DUPLICATION) << '\n';             \
         }                                                         \
         in_help_NO_DUPLICATION.close();                           \
     } else {                                                      \
-        STR_NO_DUPLICATION = "Failed to open help file" std::cerr \
-                             << changeColor(STR_NO_DUPLICATION);  \
+        STR_NO_DUPLICATION = "Failed to open help file"; \
+        std::cerr << changeColor(STR_NO_DUPLICATION);  \
     }
 
 /*************** Profiler history ***************/
