@@ -10,15 +10,10 @@
 #include <cmath>
 #include "include/logger.hpp"
 #include "include/constants.hpp"
+#include "include/color.hpp"
 
 typedef long long unsigned int ll;
 
-// Определение структуры
-
-
-std::string changeColor(std::string& str) {
-    return "\x1B[93m" + str + "\033[0m";  // yellow by default
-}
 
 std::string getGracefulDoubleString(double str) {
     int precisionVal = 3;

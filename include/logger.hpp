@@ -1,4 +1,3 @@
-#pragma once
 #include <chrono>
 #include <fstream>
 #include <iostream>
@@ -9,10 +8,7 @@
 #include <sstream>            // lib for handling time output
 #include <cmath>
 #include "constants.hpp"
-
-std::string changeColor_Q(std::string& str) {
-    return "\x1B[93m" + str + "\033[0m";  // yellow by default
-}
+#include "color.hpp"
 
 std::string STR_NO_DUPLICATION_Q;
 
@@ -85,13 +81,13 @@ public:
 
     void show_all_statistics() {
         STR_NO_DUPLICATION_Q = "ALL LOGS: \n";
-        std::cout << changeColor_Q(STR_NO_DUPLICATION_Q);
+        std::cout << changeColor(STR_NO_DUPLICATION_Q);
         for (int64_t& elem : logs) {
             STR_NO_DUPLICATION_Q = elem + '\n';
-            std::cout << changeColor_Q(STR_NO_DUPLICATION_Q) << '\n';
+            std::cout << changeColor(STR_NO_DUPLICATION_Q) << '\n';
         }
         STR_NO_DUPLICATION_Q = "Those are all logs!\n";
-        std::cout << changeColor_Q(STR_NO_DUPLICATION_Q);
+        std::cout << changeColor(STR_NO_DUPLICATION_Q);
     }
 
     ~Logger() {
@@ -155,7 +151,7 @@ public:
             out_txt.close();
         } else {
             STR_NO_DUPLICATION_Q = "FAILED to open " + file_txt + " file\n";
-            std::cerr << changeColor_Q(STR_NO_DUPLICATION_Q);
+            std::cerr << changeColor(STR_NO_DUPLICATION_Q);
         }
 
         // CSV output (supports SEVERAL launches of program)
@@ -168,7 +164,7 @@ public:
             out_csv.close();
         } else {
             STR_NO_DUPLICATION_Q = "FAILED to open " + file_csv + " file\n";
-            std::cerr << changeColor_Q(STR_NO_DUPLICATION_Q);
+            std::cerr << changeColor(STR_NO_DUPLICATION_Q);
         }
 
         // JSON output (supports SEVERAL launch of program)
