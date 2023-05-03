@@ -1,0 +1,161 @@
+--------------------------------------------------
+Profiler started at: Wed May  3 20:25:27 2023
+Profiler ended at: Wed May  3 20:25:30 2023
+----- LOGS -----
+981 hahahjdhhd
+1874 -
+----- STATS -----
+Min value: 981 ; Max value: 1874
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Wed May  3 20:25:33 2023
+Profiler ended at: Wed May  3 20:25:36 2023
+----- LOGS -----
+978 hahahjdhhd
+1870 -
+----- STATS -----
+Min value: 978 ; Max value: 1870
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Wed May  3 20:31:27 2023
+Profiler ended at: Wed May  3 20:31:30 2023
+----- LOGS -----
+985 hahahjdhhd
+1866 -
+----- STATS -----
+Min value: 985 ; Max value: 1866
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Wed May  3 22:37:09 2023
+Profiler ended at: Wed May  3 22:37:13 2023
+----- LOGS -----
+1296 hahahjdhhd
+----- STATS -----
+Min value: 1296 ; Max value: 1296
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Wed May  3 22:56:16 2023
+Profiler ended at: Wed May  3 22:56:18 2023
+----- LOGS -----
+982 hahahjdhhd
+----- STATS -----
+Min value: 982 ; Max value: 982
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:19:08 2023
+Profiler ended at: Thu May  4 01:19:11 2023
+----- LOGS -----
+986 hahahjdhhd
+----- STATS -----
+Min value: 986 ; Max value: 986
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:23:12 2023
+Profiler ended at: Thu May  4 01:23:15 2023
+----- LOGS -----
+983 hahahjdhhd
+----- STATS -----
+Min value: 983 ; Max value: 983
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:23:56 2023
+Profiler ended at: Thu May  4 01:23:59 2023
+----- LOGS -----
+979 hahahjdhhd
+----- STATS -----
+Min value: 979 ; Max value: 979
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:25:01 2023
+Profiler ended at: Thu May  4 01:25:04 2023
+----- LOGS -----
+982 hahahjdhhd
+----- STATS -----
+Min value: 982 ; Max value: 982
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:25:25 2023
+Profiler ended at: Thu May  4 01:25:27 2023
+----- LOGS -----
+989 hahahjdhhd
+----- STATS -----
+Min value: 989 ; Max value: 989
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:28:17 2023
+Profiler ended at: Thu May  4 01:28:19 2023
+----- LOGS -----
+983 hahahjdhhd
+----- STATS -----
+Min value: 983 ; Max value: 983
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 01:28:36 2023
+Profiler ended at: Thu May  4 01:28:39 2023
+----- LOGS -----
+978 hahahjdhhd
+----- STATS -----
+Min value: 978 ; Max value: 978
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 02:25:44 2023
+Profiler ended at: Thu May  4 02:25:47 2023
+----- LOGS -----
+DIMENSION: nanosecs
+983 hahahjdhhd
+----- STATS -----
+Min value: 983 ; Max value: 983
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 02:27:18 2023
+Profiler ended at: Thu May  4 02:27:21 2023
+----- LOGS -----
+DIMENSION: nanosecs
+974 hahahjdhhd
+----- STATS -----
+Min value: 974 ; Max value: 974
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 02:27:25 2023
+Profiler ended at: Thu May  4 02:27:28 2023
+----- LOGS -----
+DIMENSION: nanosecs
+977 hahahjdhhd
+----- STATS -----
+Min value: 977 ; Max value: 977
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 02:27:39 2023
+Profiler ended at: Thu May  4 02:27:42 2023
+----- LOGS -----
+DIMENSION: nanosecs
+975 hahahjdhhd
+----- STATS -----
+Min value: 975 ; Max value: 975
+--------------------------------------------------
+
+--------------------------------------------------
+Profiler started at: Thu May  4 02:27:55 2023
+Profiler ended at: Thu May  4 02:27:57 2023
+----- LOGS -----
+DIMENSION: nanosecs
+982 hahahjdhhd
+----- STATS -----
+Min value: 982 ; Max value: 982
+--------------------------------------------------
+

@@ -1,0 +1,6 @@
+*.cpp
+*.out
+.vscode
+*.csv
+*.json
+*.txt
