@@ -3,17 +3,16 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
-#include <ctime>              // for current PC time/date
+#include <ctime>                      // for current PC time/date
 #include "include/nlohmann/json.hpp"  // lib for handling JSON
-#include <cstdio>             // lib for deleting files
-#include <sstream>            // lib for handling time output
+#include <cstdio>                     // lib for deleting files
+#include <sstream>                    // lib for handling time output
 #include <cmath>
 #include "include/logger.hpp"
 #include "include/constants.hpp"
 #include "include/color.hpp"
 
 typedef long long unsigned int ll;
-
 
 std::string getGracefulDoubleString(double str) {
     int precisionVal = 3;
@@ -23,7 +22,6 @@ std::string getGracefulDoubleString(double str) {
 }
 
 std::string STR_NO_DUPLICATION;
-
 
 /**************************************************/
 /******************** PROFILER ********************/
@@ -158,20 +156,20 @@ double RES_NO_DUPLICATION;
 
 // STOPPED HERE
 /*************** Profiler help ********* ******/
-#define HELP                                                      \
-    STR_NO_DUPLICATION = "Short overview of all commands:\n";     \
-    std::cout << changeColor(STR_NO_DUPLICATION);                 \
-    std::string LINE_NO_DUPLICATION;                              \
-    std::ifstream in_help_NO_DUPLICATION;                         \
-    in_help_NO_DUPLICATION.open("include/help.txt");              \
-    if (in_help_NO_DUPLICATION.is_open()) {                       \
-        while (getline(in_help_NO_DUPLICATION, LINE_NO_DUPLICATION)) {                \
-            std::cout << changeColor(LINE_NO_DUPLICATION) << '\n';             \
-        }                                                         \
-        in_help_NO_DUPLICATION.close();                           \
-    } else {                                                      \
-        STR_NO_DUPLICATION = "Failed to open help file"; \
-        std::cerr << changeColor(STR_NO_DUPLICATION);  \
+#define HELP                                                           \
+    STR_NO_DUPLICATION = "Short overview of all commands:\n";          \
+    std::cout << changeColor(STR_NO_DUPLICATION);                      \
+    std::string LINE_NO_DUPLICATION;                                   \
+    std::ifstream in_help_NO_DUPLICATION;                              \
+    in_help_NO_DUPLICATION.open("include/help.txt");                   \
+    if (in_help_NO_DUPLICATION.is_open()) {                            \
+        while (getline(in_help_NO_DUPLICATION, LINE_NO_DUPLICATION)) { \
+            std::cout << changeColor(LINE_NO_DUPLICATION) << '\n';     \
+        }                                                              \
+        in_help_NO_DUPLICATION.close();                                \
+    } else {                                                           \
+        STR_NO_DUPLICATION = "Failed to open help file";               \
+        std::cerr << changeColor(STR_NO_DUPLICATION);                  \
     }
 
 /*************** Profiler history ***************/
