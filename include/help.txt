@@ -1,0 +1,46 @@
+///////////////// PROFILER HELP /////////////////
+Key commands:
+    1. START - triggers profiler to start count time
+    2. STARTP - START + printing line that profiler started
+    3. START_PRINT_LINE,
+       START_PRINT = STARTP
+    4. END - triggers profiler to finish timer that measured current piece of code
+    5. ENDP - the same as previous + print time into console
+    6. END_PRINT = ENDP
+    7. END_WITH_COMMENT(str) - END + string comment
+    8. END_COMMENT(str) = END_WITH_COMMENT(str)
+    9. ENDP_WITH_COMMENT(str) - ENDP + string comment
+    10. END_PRINT_WITH_COMMENT(str),
+        ENDP_COMMENT(str),
+        END_PRINT_COMMENT(str) = ENDP_WITH_COMMENT(str)
+    11. PRINT_TIME - shows you the result of your measurement in milisecs
+    12. PRINT_TIME_IN_MILISECS = PRINT_TIME
+    13. PRINT_TIME_IN_NANOSECS,
+        PRINT_TIME_IN_MICROSECS,
+        PRINT_TIME_IN_SECS - similarly, but with another dimension
+    14. PRINT_TIME_WITH_COMMENT(str) - PRINT_TIME + comment in brackets (temporary comment, will NOT be shown in log files)
+    15. COMMENT(str) = PRINT_TIME_WITH_COMMENT(str)
+    16. PRINT_TIME_IN_NANOSECS_WITH_COMMENT(str),
+        PRINT_TIME_IN_MICROSECS_WITH_COMMENT(str),
+        PRINT_TIME_IN_SECS_WITH_COMMENT(str) - similarly, but with another dimension
+    17. INFO - shows basic info about this profiler
+    18. HELP - shows current file
+    19. SHOW_ALL_LOGS - shows all previous logs
+    20. CLEAR_LOGS - clears all logs in current program
+    21. CLEAR_ALL_FILE_LOGS - clears all log files 
+    22. CLEAR_ALL_LOGS - clear all log files & log in the current program
+    23. ANALYZE - prepares files for analyzing (plug, needed for further updated versions of profiler)
+    24. CHANGE_DIMENSION(str) - changes the dimension to:
+        NANOSECS (default) - when str = "NANOSECS"
+        MICROSECS - when str = "MICROSECS"
+        MILISECS - when str = "MILISECS"
+        SECS - when str = "SECS"
+        Attention! During one runtime the dimension of ALL this runtime's results will be the same 
+                   (that was set last)
+
+How to use correctly:
+    START -> END -> PRINT_TIME -> repeat this cycle;
+    All other commands can be written anywhere, but do not forget about logic!
+
+Needed environment:
+    C++ version 17+ (i.e. 17, 20, 23, ...)

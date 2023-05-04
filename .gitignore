@@ -3,4 +3,4 @@
 .vscode
 *.csv
 *.json
-*.txt
+log.txt
