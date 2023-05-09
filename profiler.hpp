@@ -187,14 +187,13 @@ double RES_NO_DUPLICATION;
     STR_NO_DUPLICATION = "Use log files to analyze your code speed!"; \
     std::cout << changeColor(STR_NO_DUPLICATION);
 
-#define CHANGE_DIMENSION(str)   \
-    switch (str) {              \
-        case "NANOSECS":        \
-            CHANGE_DIMENSION(0) \
-        case "MICROSECS":       \
-            CHANGE_DIMENSION(1) \
-        case "MILISECS":        \
-            CHANGE_DIMENSION(2) \
-        case "SECS":            \
-            CHANGE_DIMENSION(3) \
+#define CHANGE_DIMENSION(str)                   \
+    if (strcmp(str, "NANOSECS") == 0) {         \
+        profiler.logger.changeDimension(0);     \
+    } else if (strcmp(str, "MICROSECS") == 0) { \
+        profiler.logger.changeDimension(1);     \
+    } else if (strcmp(str, "MILISECS") == 0) {  \
+        profiler.logger.changeDimension(2);     \
+    } else if (strcmp(str, "SECS") == 0) {      \
+        profiler.logger.changeDimension(3);     \
     }
