@@ -59,9 +59,9 @@ double RES_NO_DUPLICATION;
         profiler.stopTime - profiler.startTime);                                           \
     RES_NO_DUPLICATION = (double)profiler.duration_time.count();                           \
     STR_NO_DUPLICATION =                                                                   \
-        getGracefulDoubleString(RES_NO_DUPLICATION) / NANOSECS_IN_MILISEC + " milisecs\n"; \
+        getGracefulDoubleString(RES_NO_DUPLICATION / NANOSECS_IN_MILISEC) + " milisecs\n"; \
     std::cout << changeColor(STR_NO_DUPLICATION);                                          \
-    profiler.logger.log(RES_NO_DUPLICATION);                                               \
+    profiler.logger.log(RES_NO_DUPLICATION);                                               
     // std::cout << "Testing result has been written to a logger file" << '\n';
 #define END_PRINT ENDP
 
