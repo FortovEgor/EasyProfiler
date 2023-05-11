@@ -84,7 +84,7 @@ double RES_NO_DUPLICATION;
     RES_NO_DUPLICATION = (double)profiler.duration_time.count() / NANOSECS_IN_MILISEC; \
     STR_NO_DUPLICATION = getGracefulDoubleString(RES_NO_DUPLICATION) + " milisecs\n";  \
     std::cout << changeColor(STR_NO_DUPLICATION);                                      \
-    profiler.logger.log(RES_NO_DUPLICATION, str);                                      \
+    profiler.logger.log((int64_t)profiler.duration_time.count(), str);                 \
     // std::cout << "Testing result has been written to a logger file" << '\n';
 #define END_PRINT_WITH_COMMENT(str) ENDP_WITH_COMMENT(str)
 #define ENDP_COMMENT(str) ENDP_WITH_COMMENT(str)
@@ -149,15 +149,12 @@ double RES_NO_DUPLICATION;
 #define COMMENT(str) PRINT_TIME_WITH_COMMENT(str)
 
 /*************** Profiler info ***************/
-#define INFO                                                                          \
-    STR_NO_DUPLICATION = "------- Simple fortov profiler -------\n";                  \
-    std::cout << changeColor(STR_NO_DUPLICATION);                                     \
-    STR_NO_DUPLICATION =                                                              \
-        "Simple profiler for measuring execution time in .cpp programms;\nCommands: " \
-        "START, END, ENDP(=ENDR=ENDF=ENDf), PRINT_TIME, PRINT_TIME_IN_MICROSECS, "    \
-        "PRINT_TIME_IN_SECS\n";                                                       \
-    std::cout << changeColor(STR_NO_DUPLICATION);                                     \
-    STR_NO_DUPLICATION = "dev's email: ekfortov@edu.hse.ru";                          \
+#define INFO                                                                                  \
+    STR_NO_DUPLICATION = "------- Simple fortov profiler -------\n";                          \
+    std::cout << changeColor(STR_NO_DUPLICATION);                                             \
+    STR_NO_DUPLICATION = "Simple profiler for measuring execution time in .cpp programms;\n"; \
+    std::cout << changeColor(STR_NO_DUPLICATION);                                             \
+    STR_NO_DUPLICATION = "dev's email: ekfortov@edu.hse.ru";                                  \
     std::cout << changeColor(STR_NO_DUPLICATION);
 
 // STOPPED HERE
