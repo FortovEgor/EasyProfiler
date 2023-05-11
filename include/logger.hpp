@@ -82,7 +82,7 @@ public:
         STR_NO_DUPLICATION_Q = "ALL LOGS: \n";
         std::cout << changeColor(STR_NO_DUPLICATION_Q);
         for (int64_t& elem : logs) {
-            STR_NO_DUPLICATION_Q = elem + '\n';
+            STR_NO_DUPLICATION_Q = std::to_string(elem);
             std::cout << changeColor(STR_NO_DUPLICATION_Q) << '\n';
         }
         STR_NO_DUPLICATION_Q = "Those are all logs!\n";
@@ -108,14 +108,17 @@ public:
                 for (int i = 0; i < logs.size(); ++i) {
                     logs[i] /= NANOSECS_IN_MICROSEC;
                 }
+                break;
             case 2:  // milisecs
                 for (int i = 0; i < logs.size(); ++i) {
                     logs[i] /= NANOSECS_IN_MILISEC;
                 }
+                break;
             case 3:  // secs
                 for (int i = 0; i < logs.size(); ++i) {
                     logs[i] /= NANOSECS_IN_SEC;
                 }
+                break;
         }
 
         // TXT output (supports SEVERAL launches of program)
