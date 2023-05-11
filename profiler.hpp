@@ -21,7 +21,9 @@ std::string getGracefulDoubleString(double str) {
     return trimmedString;
 }
 
-std::string STR_NO_DUPLICATION;
+std::string STR_NO_DUPLICATION;        // for temp values
+std::string LINE_NO_DUPLICATION;       // for HELP macro
+std::ifstream in_help_NO_DUPLICATION;  // for HELP macro
 
 /**************************************************/
 /******************** PROFILER ********************/
@@ -61,8 +63,8 @@ double RES_NO_DUPLICATION;
     STR_NO_DUPLICATION =                                                                   \
         getGracefulDoubleString(RES_NO_DUPLICATION / NANOSECS_IN_MILISEC) + " milisecs\n"; \
     std::cout << changeColor(STR_NO_DUPLICATION);                                          \
-    profiler.logger.log(RES_NO_DUPLICATION);                                               
-    // std::cout << "Testing result has been written to a logger file" << '\n';
+    profiler.logger.log(RES_NO_DUPLICATION);
+// std::cout << "Testing result has been written to a logger file" << '\n';
 #define END_PRINT ENDP
 
 // With comments:
@@ -114,26 +116,30 @@ double RES_NO_DUPLICATION;
 
 // With comments (these are temporary comments):
 #define PRINT_TIME_WITH_COMMENT(str)                                                            \
-    STR_NO_DUPLICATION = "Comment: " + str + ":\n";                                             \
+    STR_NO_DUPLICATION = str;                                                                   \
+    STR_NO_DUPLICATION = "Comment: " + STR_NO_DUPLICATION + ":\n";                              \
     std::cout << changeColor(STR_NO_DUPLICATION);                                               \
     STR_NO_DUPLICATION =                                                                        \
         getGracefulDoubleString((double)profiler.duration_time.count() / NANOSECS_IN_MILISEC) + \
         " milisecs\n";                                                                          \
     std::cout << changeColor(STR_NO_DUPLICATION);
 #define PRINT_TIME_IN_NANOSECS_WITH_COMMENT(str)                                         \
-    STR_NO_DUPLICATION = "Comment: " + str + ":\n";                                      \
+    STR_NO_DUPLICATION = str;                                                            \
+    STR_NO_DUPLICATION = "Comment: " + STR_NO_DUPLICATION + ":\n";                       \
     std::cout << changeColor(STR_NO_DUPLICATION);                                        \
     STR_NO_DUPLICATION =                                                                 \
         getGracefulDoubleString((double)profiler.duration_time.count()) + " nanosecs\n"; \
     std::cout << changeColor(STR_NO_DUPLICATION);
 #define PRINT_TIME_IN_MICROSECS_WITH_COMMENT(str)                                                \
-    STR_NO_DUPLICATION = "Comment: " + str + ":\n";                                              \
+    STR_NO_DUPLICATION = str;                                                                    \
+    STR_NO_DUPLICATION = "Comment: " + STR_NO_DUPLICATION + ":\n";                               \
     std::cout << changeColor(STR_NO_DUPLICATION);                                                \
     STR_NO_DUPLICATION =                                                                         \
         getGracefulDoubleString((double)profiler.duration_time.count() / NANOSECS_IN_MICROSEC) + \
         " microsecs\n";                                                                          \
     std::cout << changeColor(STR_NO_DUPLICATION);
 #define PRINT_TIME_IN_SECS_WITH_COMMENT(str)                                              \
+    STR_NO_DUPLICATION = str;                                                             \
     STR_NO_DUPLICATION = "Comment: " + str + ":\n";                                       \
     std::cout << changeColor(STR_NO_DUPLICATION);                                         \
     STR_NO_DUPLICATION =                                                                  \
@@ -159,8 +165,6 @@ double RES_NO_DUPLICATION;
 #define HELP                                                           \
     STR_NO_DUPLICATION = "Short overview of all commands:\n";          \
     std::cout << changeColor(STR_NO_DUPLICATION);                      \
-    std::string LINE_NO_DUPLICATION;                                   \
-    std::ifstream in_help_NO_DUPLICATION;                              \
     in_help_NO_DUPLICATION.open("include/help.txt");                   \
     if (in_help_NO_DUPLICATION.is_open()) {                            \
         while (getline(in_help_NO_DUPLICATION, LINE_NO_DUPLICATION)) { \
