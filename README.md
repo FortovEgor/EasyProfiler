@@ -63,3 +63,5 @@ int main(void) {
     return 0;
 }
 ```
+
+NOTE: A new version of thread-safe profiler (based on current) with custom logs is now a Sber's property (NOT open-source anymore).
